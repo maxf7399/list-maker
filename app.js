@@ -7,13 +7,14 @@ const addMovie = function(ev) {
     const list = document.createElement('ul')
     const listOfMovies = document.createElement('li')
     listOfMovies.textContent = `${movieName}`
+
   
     users.appendChild(list)
-
+    arrayOfMovies.push(movieName)
     list.appendChild(listOfMovies)
     form.reset()
     form.movieName.focus()
 }
-const array = []
+const arrayOfMovies = []
 const form = document.querySelector('#userForm')
 form.addEventListener('submit', addMovie)
