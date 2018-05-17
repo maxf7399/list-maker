@@ -3,18 +3,14 @@ body {
     font-family: 'Press Start 2P', cursive;
     background-color:lightgoldenrodyellow;
     text-align: center;
-    font-size: large;
+    
 }
 ul {
     display: inline-block;
 }
-#userForm {
-    background-color: indigo;
-    border: 3px solid black;
-    padding: 1rem;
-}
-div {
-   margin-top:10px;
+main {
+    width: 80%
+    margin: 1rem auto;
 }
 li {
    
