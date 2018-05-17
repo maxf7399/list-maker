@@ -1,30 +1,24 @@
-//const form = document.querySelector('form#userForm')
-const addMovie = function(ev) {
-    ev.preventDefault()
-    const movieName = form.movieName.value
-    const users = document.querySelector('#users')
+const app = {
+  init: function(formSelector) {
+    this.max = 0
 
-    const list = document.createElement('ul')
-    const listOfMovies = document.createElement('li')
-    listOfMovies.textContent = `${movieName}`
+    document
+      .querySelector(formSelector)
+      .addEventListener('submit', ev => {
+        ev.preventDefault()
+        this.handleSubmit(ev)
+      })
+  },
 
-  
-    users.appendChild(list)
-    arrayOfMovies.push(movieName)
-    list.appendChild(listOfMovies)
-    form.reset()
-    form.movieName.focus()
+  handleSubmit: function(ev) {
+    const f = ev.target
+    const flick = {
+      id: ++this.max,
+      name: f.flickName.value,
+    }
+    console.log(flick)
+    f.reset()
+  },
 }
 
-const arrayOfMovies = []
-/*
-const removeItem = function() { 
-    list.removeChild(listOfMovies)
-    for(var i = arrayOfMovies.length - 2; i < arrayOfMovies.length-1; i++) {
-           arrayOfMovies.splice(i, 1);
-        }
-    }
-    */
-const form = document.querySelector('#userForm')
-form.addEventListener('submit', addMovie)
-//form.addEventListener('remove', removeItem)
+app.init('#flickForm')
