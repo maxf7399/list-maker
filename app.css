@@ -12,3 +12,12 @@ ul {
     border: 1px solid black;
     padding: 1rem;
 }
+div {
+   margin-top:10px;
+}
+li {
+   
+   width:800px; 
+   height:15px; 
+   text-align:left;
+}
