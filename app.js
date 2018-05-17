@@ -17,12 +17,14 @@ const addMovie = function(ev) {
 }
 
 const arrayOfMovies = []
+/*
 const removeItem = function() { 
     list.removeChild(listOfMovies)
     for(var i = arrayOfMovies.length - 2; i < arrayOfMovies.length-1; i++) {
            arrayOfMovies.splice(i, 1);
         }
     }
+    */
 const form = document.querySelector('#userForm')
 form.addEventListener('submit', addMovie)
-form.addEventListener('remove', removeItem)
+//form.addEventListener('remove', removeItem)
