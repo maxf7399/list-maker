@@ -1,0 +1,18 @@
+Homework
+Make the delete button work
+Make the fav button change the style of the list item in some way
+
+bonus credit
+make the fav button also change the object in the array. for example: 
+'''js
+{
+    name: 'Max', 
+    fav: true, 
+}
+'''
+super mega bonus credit
+add buttons to move the flick up and down the list 
+make the buttons also change their place in the array
+super mega bonus hypher fighting
+allow users to edit the names of the flicks of the list after they're added.
+would it be nice if we could make that span's **content editable**(google)?

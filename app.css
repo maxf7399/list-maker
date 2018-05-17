@@ -5,18 +5,28 @@ body {
     text-align: center;
     
 }
-ul {
-    display: inline-block;
-}
-main {
-    width: 80%
-}
-li {
-   
-   width:800px; 
-   height:15px; 
-   text-align:left;
-}
-.flickName {
-    margin: 0 0.75rem;
-}
+header {
+    position: relative;
+    margin-bottom: -3.4vw;
+  }
+  .banner {
+    width: 100%;
+  }
+  .banner img {
+    position: relative;
+    width: 100%;
+  }
+  
+  main {
+    width: 80%;
+    background-color:indigo;
+    margin: 1rem auto;
+  }
+  
+  .flickName {
+    margin: 0 0.75rem
+  }
+  
+  .template {
+    display: none;
+  }
