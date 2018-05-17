@@ -3,6 +3,7 @@ body {
     font-family: 'Press Start 2P', cursive;
     background-color:lightgoldenrodyellow;
     text-align: center;
+    font-size: large;
 }
 ul {
     display: inline-block;
