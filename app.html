@@ -26,7 +26,7 @@
         >
         <div class="input-group-button">
           <button
-            class="button"
+            class="success button"
             type="submit"
           >
             Add movie
@@ -35,7 +35,15 @@
       </div>
     </form>
 
-    <ul id="flickList"></ul>
+    <ul id="flickList" class='no-bullet'>
+        <li class='flick grid-x allign-middle'>
+            <span class='flickName auto cell'>Jupiter Ascending</span>
+            <span class='actions shrink cell'>
+                <button class='button warning'>favorite</button>
+                <button class='alert button'>delete</button>
+            </span>
+        </li>
+    </ul>
   </main>
 
   <script src="app.js"></script>
