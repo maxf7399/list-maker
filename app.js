@@ -27,6 +27,10 @@ const app={
         }
         console.log(this.flicks)
     },
+    removeFlick(ev) {
+        const item = ev.target.closest('.flick')
+        item.remove()
+    },
 
     favoriteListItem(ev){
         const button = ev.target
@@ -48,11 +52,12 @@ const app={
         item
           .querySelector('.flickName')
           .textContent = flick.name
-        item.querySelector('button.alert.button').addEventListener('click', (ev)=>{
-            ev.preventDefault()
-            this.removeListItem(ev)
-        })
-        item.querySelector('button.warning.button').addEventListener('click', (ev)=>{
+        item
+          .querySelector('.remove.button')
+          .addEventListener('click', this.removeFlick)
+        item
+          .querySelector('.warning.button')
+          .addEventListener('click', (ev)=>{
             ev.preventDefault()
             this.favoriteListItem(ev)
         })
