@@ -11,25 +11,12 @@ const app={
                 this.handleSubmit(ev)
             })
     },
-
-    removeListItem(ev){
-        ev.preventDefault()
-        const button=ev.target
-        const flick = button.parentNode.parentNode
-        flick.remove()
-        for(let i=0; i<this.flicks.length; i++)
-        {
-            const indexId = this.flicks[i].id.toString()
-            if(flick.dataset.id===indexId){
-                this.flicks.splice(i, 1)
-                break
-            }        
-        }
-        console.log(this.flicks)
-    },
-    removeFlick(ev) {
+    removeFlick(flick, ev) {
         const item = ev.target.closest('.flick')
         item.remove()
+
+        const i = this.flicks.indexOf(flick)
+        this.flicks.splice(i, 1)
     },
 
     favoriteListItem(ev){
@@ -54,7 +41,7 @@ const app={
           .textContent = flick.name
         item
           .querySelector('.remove.button')
-          .addEventListener('click', this.removeFlick)
+          .addEventListener('click', this.removeFlick.bind(this, flick))
         item
           .querySelector('.warning.button')
           .addEventListener('click', (ev)=>{
