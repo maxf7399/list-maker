@@ -29,3 +29,7 @@ header {
   .template {
     display: none;
   }
+
+  .flick.fav {
+      background-color:yellow;
+  }
